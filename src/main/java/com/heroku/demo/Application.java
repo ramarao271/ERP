@@ -17,12 +17,15 @@ package com.heroku.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+@ComponentScan(basePackages = "com")
 @SpringBootApplication
 public class Application {
-
+	 private static final Class<Application> applicationClass = Application.class;
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
-
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(applicationClass);
+    } 
 }
