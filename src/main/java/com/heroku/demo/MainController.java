@@ -26,6 +26,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @SessionAttributes("user")
+@RequestMapping("/main")
 public class MainController {
 
 	@Autowired
