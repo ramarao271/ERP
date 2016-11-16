@@ -13,11 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.heroku.demo;
+package com;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-@ComponentScan(basePackages = "com")
 @SpringBootApplication
 public class Application {
 	 private static final Class<Application> applicationClass = Application.class;
